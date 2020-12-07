@@ -41,6 +41,8 @@ class Debugger(object):
         (255, 0, 0), (0, 0, 255), (255, 0, 0), (0, 0, 255),
         (255, 0, 0), (0, 0, 255), (255, 0, 0), (0, 0, 255),
         (255, 0, 0), (0, 0, 255)]
+    elif num_classes == 11 or dataset == 'Annapolis':
+      self.names = deepfashion_class_name
     elif num_classes == 80 or dataset == 'coco':
       self.names = coco_class_name
     elif num_classes == 20 or dataset == 'pascal':
@@ -435,6 +437,14 @@ kitti_class_name = [
 gta_class_name = [
   'p', 'v'
 ]
+
+deepfashion_class_name = ['Anorak','Blazer','Blouse','Bomber','Button-Down',
+'Cardigan','Flannel','Halter','Henley','Hoodie','Jacket','Jersey','Parka',
+'Peacoat','Poncho','Sweater','Tank','Tee','Top','Turtleneck','Capris','Chinos',
+'Culottes','Cutoffs','Gauchos','Jeans','Jeggings','Jodhpurs','Joggers','Leggings',
+'Sarong','Shorts','Skirt','Sweatpants','Sweatshorts','Trunks','Caftan','Cape',
+'Coat','Coverup','Dress','Jumpsuit','Kaftan','Kimono','Nightdress','Onesie','Robe',
+'Romper','Shirtdress','Sundress']
 
 pascal_class_name = ["aeroplane", "bicycle", "bird", "boat", "bottle", "bus", 
   "car", "cat", "chair", "cow", "diningtable", "dog", "horse", "motorbike", 
